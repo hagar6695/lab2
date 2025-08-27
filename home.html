@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn - Home</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <i class="fab fa-linkedin me-2"></i>LinkedIn
+            </a>
+
+            <!-- Search Bar -->
+            <div class="d-none d-md-flex flex-grow-1 mx-4">
+                <div class="input-group" style="max-width: 400px;">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="fas fa-search text-muted"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0"
+                        placeholder="Search for people, jobs, and more..." style="box-shadow: none;">
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="d-flex align-items-center">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-center" href="home.html">
+                            <i class="fas fa-home d-block"></i>
+                            <small>Home</small>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-center" href="#">
+                            <i class="fas fa-users d-block"></i>
+                            <small>Network</small>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-center" href="#">
+                            <i class="fas fa-briefcase d-block"></i>
+                            <small>Jobs</small>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-center" href="#">
+                            <i class="fas fa-comments d-block"></i>
+                            <small>Messages</small>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link text-center dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">
+                            <div class="post-avatar me-3 d-flex justify-content-center align-items-center rounded-circle overflow-hidden"
+                                style="width: 50px; height: 50px; border: 2px solid #ddd;">
+                                <img src="/images/OIP.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <small>Me</small>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>View Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="logoutBtn"><i
+                                        class="fas fa-sign-out-alt me-2"></i>Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid main-content">
+        <div class="row">
+            <!-- Left Sidebar -->
+            <div class="col-lg-3 col-md-4 d-none d-md-block">
+                <!-- User Profile Card -->
+                <!-- News & Trending -->
+                <div class="sidebar-card">
+                    <div class="sidebar-header">
+                        <i class="fas fa-newspaper me-2"></i>LinkedIn News
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-info">
+                            <div class="sidebar-name">Tech layoffs continue in 2025</div>
+                            <div class="sidebar-title">2 hours ago • 1,234 readers</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-info">
+                            <div class="sidebar-name">Remote work trends evolving</div>
+                            <div class="sidebar-title">4 hours ago • 2,567 readers</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-info">
+                            <div class="sidebar-name">AI skills in high demand</div>
+                            <div class="sidebar-title">6 hours ago • 3,891 readers</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-info">
+                            <div class="sidebar-name">Startup funding rebounds</div>
+                            <div class="sidebar-title">8 hours ago • 1,567 readers</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="sidebar-card">
+                    <div class="sidebar-header">
+                        <i class="fas fa-bookmark me-2"></i>Saved Element
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-users text-linkedin me-3"></i>
+                        <span>Groups</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-briefcase text-linkedin me-3"></i>
+                        <span>Jobs</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-graduation-cap text-linkedin me-3"></i>
+                        <span>Learning</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fas fa-calendar text-linkedin me-3"></i>
+                        <span>Events</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Feed -->
+            <div class="col-lg-6 col-md-8 col-12">
+                <!-- Create Post Section -->
+                <div class="feed-container my-3">
+                    <div class="p-3 bg-white rounded shadow-sm">
+                        <!-- Top row: avatar + input -->
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="post-avatar me-3 d-flex justify-content-center align-items-center rounded-circle overflow-hidden"
+                                style="width: 50px; height: 50px; border: 2px solid #ddd;">
+                                <img src="/images/OIP.jpeg" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <input type="text" class="form-control rounded-pill" placeholder="Start a post..."
+                                style="background-color:#f3f2ef;border:none;cursor:pointer;" readonly>
+                        </div>
+
+                        <hr class="my-3">
+
+                        <!-- Action buttons -->
+                        <div class="row text-center g-2">
+                            <div class="col-3">
+                                <button
+                                    class="btn btn-light w-100 py-2 d-flex flex-column align-items-center justify-content-center"
+                                    style="border-radius:10px;">
+                                    <i class="fas fa-image text-primary fs-5 mb-1"></i>
+                                    <span class="small fw-semibold">Photo</span>
+                                </button>
+                            </div>
+                            <div class="col-3">
+                                <button
+                                    class="btn btn-light w-100 py-2 d-flex flex-column align-items-center justify-content-center"
+                                    style="border-radius:10px;">
+                                    <i class="fas fa-video text-success fs-5 mb-1"></i>
+                                    <span class="small fw-semibold">Video</span>
+                                </button>
+                            </div>
+                            <div class="col-3">
+                                <button
+                                    class="btn btn-light w-100 py-2 d-flex flex-column align-items-center justify-content-center"
+                                    style="border-radius:10px;">
+                                    <i class="fas fa-calendar text-warning fs-5 mb-1"></i>
+                                    <span class="small fw-semibold">Event</span>
+                                </button>
+                            </div>
+                            <div class="col-3">
+                                <button
+                                    class="btn btn-light w-100 py-2 d-flex flex-column align-items-center justify-content-center"
+                                    style="border-radius:10px;">
+                                    <i class="fas fa-pen text-danger fs-5 mb-1"></i>
+                                    <span class="small fw-semibold">Article</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feed Posts -->
+                <div class="feed-container">
+                    <div class="feed-header">
+                        <i class="fas fa-newspaper me-2"></i>Recent Activity
+                    </div>
+                    <div class="feed-posts">
+                        <!-- Posts will be dynamically loaded here -->
+                    </div>
+                    <!--comment like-->
+
+                    <div class="d-flex justify-content-around border-top pt-2">
+                        <div class="text-center">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span class="ms-1">Like</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="bi bi-chat"></i>
+                            <span class="ms-1">Comment</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="bi bi-arrow-repeat"></i>
+                            <span class="ms-1">Repost</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="bi bi-send"></i>
+                            <span class="ms-1">Send</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-lg-3 d-none d-lg-block">
+
+                <!-- People You May Know -->
+                <div class="sidebar-card">
+                    <div class="sidebar-header">
+                        <i class="fas fa-user-plus me-2"></i>People You May Know
+                    </div>
+                    <div class="suggestions-list">
+                        <div class="sidebar-item">
+                            <div class="sidebar-avatar">AT</div>
+                            <div class="sidebar-info">
+                                <div class="sidebar-name">Alex Thompson</div>
+                                <div class="sidebar-title">Product Manager at StartupCo</div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-item">
+                            <div class="sidebar-avatar">AT</div>
+                            <div class="sidebar-info">
+                                <div class="sidebar-name">Alex Thompson</div>
+                                <div class="sidebar-title">Product Manager at StartupCo</div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-item">
+                            <div class="sidebar-avatar">AT</div>
+                            <div class="sidebar-info">
+                                <div class="sidebar-name">Alex Thompson</div>
+                                <div class="sidebar-title">Product Manager at StartupCo</div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-item">
+                            <div class="sidebar-avatar">AT</div>
+                            <div class="sidebar-info">
+                                <div class="sidebar-name">Alex Thompson</div>
+                                <div class="sidebar-title">Product Manager at StartupCo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center border-top">
+                        <a href="#" class="link-custom">
+                            <i class="fas fa-arrow-right me-1"></i>Show more
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Promoted Content -->
+                <div class="sidebar-card">
+                    <div class="sidebar-header">
+                        <i class="fas fa-ad me-2"></i>Promoted
+                    </div>
+                    <div class="p-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="sidebar-avatar bg-primary">TC</div>
+                            <div class="sidebar-info">
+                                <div class="sidebar-name">TechCorp</div>
+                                <div class="sidebar-title">Software Company</div>
+                            </div>
+                        </div>
+                        <p class="small mb-2">Join our team of innovative developers building the future of technology.
+                        </p>
+                        <button class="btn btn-outline-linkedin btn-sm w-100">
+                            <i class="fas fa-external-link-alt me-1"></i>Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- Additional home page functionality -->
+    <script>
+        $(document).ready(function () {
+            // Mobile search toggle
+            $('#mobileSearchToggle').on('click', function () {
+                $('#mobileSearch').toggleClass('d-none');
+            });
+
+            // Post interactions
+            $(document).on('click', '.post-action', function () {
+                const action = $(this).data('action');
+                const count = $(this).find('.action-count');
+                let currentCount = parseInt(count.text()) || 0;
+
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    count.text(currentCount - 1);
+                } else {
+                    $(this).addClass('active');
+                    count.text(currentCount + 1);
+                }
+            });
+
+            // Sidebar item interactions
+            $('.sidebar-item').on('click', function () {
+                $(this).addClass('clicked');
+                setTimeout(() => {
+                    $(this).removeClass('clicked');
+                }, 150);
+            });
+
+            // Show loading animation on navigation
+            $('.nav-link').on('click', function (e) {
+                if ($(this).attr('href') && $(this).attr('href') !== '#') {
+                    $('body').append('<div class="position-fixed top-50 start-50 translate-middle" style="z-index: 9999;"><div class="spinner-custom"></div></div>');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

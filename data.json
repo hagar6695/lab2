@@ -1,0 +1,5 @@
+https: //retoolapi.dev/6fIvBA/data
+/6fIvBA/data?_page=2&_limit=10 //paganition
+
+/6fIvBA/data //get
+/6fIvBA/data/1 //get by id 
